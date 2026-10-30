@@ -1,54 +1,165 @@
 # SoundBlast
 
-**Per-device audio boost for Windows — native APO, no virtual driver.**
+**More volume on every device — no virtual driver.**
 
-## Download
+[English](README.md) · [Português](README.pt-BR.md) · [Español](README.es.md)
 
-Get the latest installer from **Releases** (`SoundBlastSetup-*.exe`) and run it
-as Administrator. It installs the app, the APO, shortcuts and an uninstaller
-that removes the logon task, APO bindings and the System32 DLL.
+![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-0078D6?style=flat-square)
+![Version](https://img.shields.io/badge/version-1.0.3-2ea44f?style=flat-square)
+![License](https://img.shields.io/badge/license-Proprietary-red?style=flat-square)
 
-## Features
+<p align="center">
+  <img src="screenshot.png" width="520" alt="SoundBlast">
+</p>
 
-- Gain from **-20 dB to +30 dB** with a limiter, applied live.
-- Applies to **all active real devices** by default.
-- **Isolate by device** with a de-duplicated list (groups Bluetooth profiles).
-- **Start with Windows**; minimizes to the tray with a notification.
-- Own icon, single instance, and **languages: English (default), Português,
-  Español**.
-- Windows keeps switching between headset/speaker/USB as usual.
+SoundBlast is a **native Windows APO** (Audio Processing Object) that boosts
+volume and tames peaks *inside* the output device. There is **no virtual sound
+card, no extra device to select, and no driver layer in the middle**. Windows
+keeps switching between headset, Bluetooth speaker, USB and HDMI — and the boost
+follows the device.
+
+## Why another volume booster?
+
+- Laptop speakers and Bluetooth boxes are often just **too quiet**.
+- Virtual audio drivers add a middle layer and an extra “device” to manage.
+- Powerful APO tools exist, but are **complex** for most people.
+- Easy tools often use a virtual device, which can get in the way of the device
+  switching you already trust.
+
+SoundBlast is the opposite trade-off: **one toggle, +30 dB with a limiter, on
+the device Windows is already using**.
+
+## Highlights
+
+- **Volume boost up to +30 dB** with an always-on limiter.
+- **Applies to all active real devices** by default (USB, Bluetooth, HDMI,
+  S/PDIF).
+- **Isolate by device** mode with a de-duplicated list (groups Bluetooth
+  profiles of the same headset/speaker).
+- **Follows Windows device switching** — no virtual device to select.
+- **Live gain**: the slider applies immediately.
+- **Start with Windows**, tray icon, single instance, balloon notice.
+- **English (default), Portuguese and Spanish**.
+- **No network access, no telemetry, no data collection.**
+- Ignores virtual devices (e.g. FxSound) on purpose.
+
+## SoundBlast vs. the alternatives
+
+| | **SoundBlast** | **FxSound** | **Equalizer APO** | **Boom 3D** | **SteelSeries Sonar** |
+|---|---|---|---|---|---|
+| Native APO (no virtual device) | ✅ Yes | ❌ Virtual device | ✅ Yes | ❌ Virtual device | ❌ Virtual device |
+| Volume boost | ✅ up to +30 dB | ✅ | ✅ preamp | ✅ | ✅ |
+| Limiter | ✅ always on | ✅ | ➖ manual | ✅ | ✅ |
+| Equalizer | 🚧 roadmap | ✅ 9-band | ✅ advanced / VST | ✅ 31-band | ✅ 10-band |
+| Presets | 🚧 roadmap | ✅ | ➖ manual | ✅ | ✅ |
+| Per-app control | ➖ device-wide | ➖ limited | ⚙️ via config | ✅ | ✅ |
+| Languages | ✅ EN / PT / ES | EN | EN | EN (+ varies) | EN |
+| Network / telemetry | ✅ none | open-source | open-source | varies | account / varies |
+| Price | **Free (personal)** | Free | Free | Paid | Free (hardware) |
+
+> **Honest note:** SoundBlast is focused on **gain + limiting**, not a full EQ
+> yet. If you need EQ presets *today*, FxSound or Equalizer APO are more
+> complete. The difference is the **no-virtual-driver** design and the
+> one-toggle simplicity. Feature sets vary by version/platform — check each
+> vendor.
+
+## What makes it different
+
+1. **Device-native.** The APO is attached to the Windows endpoint, so it
+   processes every app playing on that device.
+2. **No virtual driver.** Windows' own device switching stays exactly as it is.
+3. **Simple.** One switch, one slider, a tray icon.
+4. **Transparent.** No network, no telemetry; security notes and hashes are
+   published.
+5. **Practical.** Isolate mode, auto-start, three languages, graceful tray
+   behavior.
+
+## How it works
+
+1. `SoundBlastAPO.dll` is registered as an APO and bound to the output endpoint
+   through `FxProperties`.
+2. `audiodg.exe` loads it inside the device pipeline.
+3. The UI publishes gain/limiter settings through shared memory (and a config
+   file, so the last state survives the UI being closed).
+
+## Works with all apps
+
+SoundBlast processes **shared-mode audio on real output devices** — games,
+browsers, music, system sounds, communication apps, and several apps at once.
+
+Technical limits worth knowing:
+
+- **WASAPI exclusive / ASIO** apps bypass any APO (not only SoundBlast).
+- **DRM / protected audio** may refuse audio because the installer sets
+  `DisableProtectedAudioDG=1` (required for an unsigned APO).
+- If an app is **manually routed to a virtual device** (FxSound, Voicemeeter,
+  VB-Audio), it bypasses the APO. Keep apps on *Default* / a real device. A
+  helper script to reset per-app routing is included in the project.
+- The Windows **Volume Mixer** only lists apps with an active audio session;
+  absence is not a bug.
+
+## Install
+
+1. Download the latest **installer** from
+   [Releases](https://github.com/denoso1993/soundblast/releases).
+2. Run `SoundBlastSetup-*.exe` as **Administrator**.
+3. Open SoundBlast, keep **On**, choose a gain, and (optionally) enable
+   *Start with Windows*.
+
+Requirements: Windows 10/11 **x64**. The APO is **unsigned** (code signing is on
+the roadmap).
 
 ## Security and transparency
 
-See [SECURITY.md](SECURITY.md). The APO is **unsigned**; the installer sets
-`DisableProtectedAudioDG=1`. DRM-protected content may refuse audio. The app
-has **no network access and no telemetry**.
+- See [SECURITY.md](SECURITY.md) for every registry key, file and task the app
+  changes, plus uninstall details.
+- **No network access. No telemetry. No personal data collection.**
+- Hashes: [SHA256SUMS.txt](SHA256SUMS.txt).
+- The unsigned APO requires `DisableProtectedAudioDG=1`; DRM content may refuse
+  audio. Exclusive-mode apps ignore the APO.
 
-## Donation / Doação / Donación
+## Roadmap
 
-**EN** — If you liked the app, donate to this ethereum address:
+- 10-band EQ, bass boost and presets.
+- Per-device presets and profiles.
+- Code signing (Authenticode / Trusted Signing).
+- Microsoft Store / winget package.
+- ARM64 build.
 
-**PT** — Gostou do app? Doe para este endereço Ethereum:
+## FAQ
 
-**ES** — ¿Te gustó la app? Dona a esta dirección Ethereum:
+**Is it safe?** The code is proprietary, but it is transparent about what it
+changes: see `SECURITY.md`. There is no network or telemetry. Verify the
+installer hash before running.
+
+**Why does SmartScreen warn?** The binary is not code-signed yet. Signing is on
+the roadmap.
+
+**Does it work with every app?** Shared-mode audio on real devices, yes.
+Exclusive/ASIO apps and apps routed to virtual devices are the exceptions
+explained above.
+
+**Can I use it together with FxSound?** Technically yes, but avoid routing apps
+to FxSound's virtual device. Since SoundBlast replaces that role, uninstalling
+FxSound is recommended.
+
+**Does it survive Windows updates?** Updates/driver installs can reset
+`FxProperties`. Use “Reinstall APO” and reapply if audio stops being processed.
+
+**Is it free?** Free for **personal use**, with an optional donation.
+Commercial use requires a separate license.
+
+## Support the project
+
+If you liked the app, donate to this **crypto** address:
+
+**EN** — If you liked the app, donate to this crypto address:
+**PT** — Gostou do app? Doe para este endereço crypto:
+**ES** — ¿Te gustó la app? Dona a esta dirección crypto:
 
 ```
 0xcBf21D49f65ca55228310344bE91F607d8d09309
 ```
-
-## Português
-
-Boost de áudio por dispositivo para Windows, com APO nativo e sem driver
-virtual. Ganho de -20 a +30 dB com limiter, aplicação em todos os dispositivos
-reais, modo isolar por dispositivo, iniciar com o Windows, bandeja e idiomas
-(inglês como padrão, português e espanhol).
-
-## Español
-
-Aumento de audio por dispositivo para Windows, con APO nativo y sin
-controlador virtual. Ganancia de -20 a +30 dB con limitador, aplicación en
-todos los dispositivos reales, modo aislar por dispositivo, iniciar con
-Windows, bandeja e idiomas (inglés por defecto, portugués y español).
 
 ## Author
 
@@ -58,5 +169,5 @@ Developed by **Denis de Oliveira Ramos** — https://github.com/denoso1993
 
 Proprietary (All Rights Reserved). Copying, redistribution, modification or
 reverse engineering without permission is prohibited. See [LICENSE](LICENSE).
-"SoundBlast" is a project name; this project is not affiliated with Creative
+“SoundBlast” is a project name; this project is not affiliated with Creative
 Technology.
