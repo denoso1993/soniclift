@@ -1,0 +1,10 @@
+﻿bin/
+obj/
+build/
+dist/
+*.exe
+*.dll
+*.pdb
+*.zip
+*.docx
+TOKEN*
