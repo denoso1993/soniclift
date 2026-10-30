@@ -5,7 +5,7 @@
 [English](README.md) · [Português](README.pt-BR.md) · **Español**
 
 ![Plataforma](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-0078D6?style=flat-square)
-![Versión](https://img.shields.io/badge/version-1.1.0-2ea44f?style=flat-square)
+![Versión](https://img.shields.io/badge/version-1.1.1-2ea44f?style=flat-square)
 ![Licencia](https://img.shields.io/badge/license-Proprietary-red?style=flat-square)
 
 <p align="center">
