@@ -5,7 +5,7 @@
 [English](README.md) · [Português](README.pt-BR.md) · [Español](README.es.md)
 
 ![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-0078D6?style=flat-square)
-![Version](https://img.shields.io/badge/version-1.0.3-2ea44f?style=flat-square)
+![Version](https://img.shields.io/badge/version-1.1.0-2ea44f?style=flat-square)
 ![License](https://img.shields.io/badge/license-Proprietary-red?style=flat-square)
 
 <p align="center">
@@ -13,10 +13,10 @@
 </p>
 
 SoundBlast is a **native Windows APO** (Audio Processing Object) that boosts
-volume and tames peaks *inside* the output device. There is **no virtual sound
-card, no extra device to select, and no driver layer in the middle**. Windows
-keeps switching between headset, Bluetooth speaker, USB and HDMI — and the boost
-follows the device.
+volume, shapes the tone and tames peaks *inside* the output device. There is **no
+virtual sound card, no extra device to select, and no driver layer in the
+middle**. Windows keeps switching between headset, Bluetooth speaker, USB and
+HDMI — and the sound follows the device.
 
 ## Why another volume booster?
 
@@ -32,6 +32,9 @@ the device Windows is already using**.
 ## Highlights
 
 - **Volume boost up to +30 dB** with an always-on limiter.
+- **10-band equalizer** with presets (Flat, Music, Gaming, Bass, Voice, Movie).
+- **Bass, Surround and Clarity** sliders for quick, beginner-friendly tuning.
+- **Automatic headroom** so EQ boosts stay clean instead of clipping.
 - **Applies to all active real devices** by default (USB, Bluetooth, HDMI,
   S/PDIF).
 - **Isolate by device** mode with a de-duplicated list (groups Bluetooth
@@ -50,25 +53,25 @@ the device Windows is already using**.
 | Native APO (no virtual device) | ✅ Yes | ❌ Virtual device | ✅ Yes | ❌ Virtual device | ❌ Virtual device |
 | Volume boost | ✅ up to +30 dB | ✅ | ✅ preamp | ✅ | ✅ |
 | Limiter | ✅ always on | ✅ | ➖ manual | ✅ | ✅ |
-| Equalizer | 🚧 roadmap | ✅ 9-band | ✅ advanced / VST | ✅ 31-band | ✅ 10-band |
-| Presets | 🚧 roadmap | ✅ | ➖ manual | ✅ | ✅ |
+| Equalizer | ✅ 10-band | ✅ 9-band | ✅ advanced / VST | ✅ 31-band | ✅ 10-band |
+| Presets | ✅ 6 built-in | ✅ | ➖ manual | ✅ | ✅ |
+| Bass / Surround / Clarity | ✅ | Bass only / limited | ⚙️ filters | ✅ | ✅ |
 | Per-app control | ➖ device-wide | ➖ limited | ⚙️ via config | ✅ | ✅ |
 | Languages | ✅ EN / PT / ES | EN | EN | EN (+ varies) | EN |
 | Network / telemetry | ✅ none | open-source | open-source | varies | account / varies |
 | Price | **Free (personal)** | Free | Free | Paid | Free (hardware) |
 
-> **Honest note:** SoundBlast is focused on **gain + limiting**, not a full EQ
-> yet. If you need EQ presets *today*, FxSound or Equalizer APO are more
-> complete. The difference is the **no-virtual-driver** design and the
-> one-toggle simplicity. Feature sets vary by version/platform — check each
-> vendor.
+> **Honest note:** SoundBlast now includes a **10-band EQ, presets, Bass,
+> Surround and Clarity**, plus automatic headroom to keep boosts clean. It is not
+> a 31-band/VST power tool — the focus is a simple, device-native experience with
+> a real limiter. Feature sets vary by version/platform — check each vendor.
 
 ## What makes it different
 
 1. **Device-native.** The APO is attached to the Windows endpoint, so it
    processes every app playing on that device.
 2. **No virtual driver.** Windows' own device switching stays exactly as it is.
-3. **Simple.** One switch, one slider, a tray icon.
+3. **Simple when you want, deep when you need.** One switch and one slider; presets and a 10-band EQ behind one button.
 4. **Transparent.** No network, no telemetry; security notes and hashes are
    published.
 5. **Practical.** Isolate mode, auto-start, three languages, graceful tray
@@ -120,8 +123,8 @@ the roadmap).
 
 ## Roadmap
 
-- 10-band EQ, bass boost and presets.
-- Per-device presets and profiles.
+- Per-device presets and custom presets.
+- Import/export of EQ profiles.
 - Code signing (Authenticode / Trusted Signing).
 - Microsoft Store / winget package.
 - ARM64 build.
@@ -138,6 +141,9 @@ the roadmap.
 **Does it work with every app?** Shared-mode audio on real devices, yes.
 Exclusive/ASIO apps and apps routed to virtual devices are the exceptions
 explained above.
+
+**Does it have an equalizer?** Yes — a 10-band EQ with six presets plus Bass,
+Surround and Clarity. Open “Equalizer…” on the main window.
 
 **Can I use it together with FxSound?** Technically yes, but avoid routing apps
 to FxSound's virtual device. Since SoundBlast replaces that role, uninstalling

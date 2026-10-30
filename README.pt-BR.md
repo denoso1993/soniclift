@@ -5,7 +5,7 @@
 [English](README.md) · **Português** · [Español](README.es.md)
 
 ![Plataforma](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-0078D6?style=flat-square)
-![Versão](https://img.shields.io/badge/version-1.0.3-2ea44f?style=flat-square)
+![Versão](https://img.shields.io/badge/version-1.1.0-2ea44f?style=flat-square)
 ![Licença](https://img.shields.io/badge/license-Proprietary-red?style=flat-square)
 
 <p align="center">
@@ -32,6 +32,9 @@ dispositivo que o Windows já está usando**.
 ## Destaques
 
 - **Ganho até +30 dB** com limiter sempre ligado.
+- **Equalizador de 10 bandas** com presets (Flat, Music, Gaming, Bass, Voice, Movie).
+- **Graves, Surround e Clareza** para ajuste rápido e amigável.
+- **Headroom automático** para o EQ não clipar.
 - Aplica em **todos os dispositivos reais ativos** por padrão (USB, Bluetooth,
   HDMI, S/PDIF).
 - **Isolar por dispositivo** com lista sem duplicados (agrupa perfis do mesmo
@@ -49,17 +52,18 @@ dispositivo que o Windows já está usando**.
 | APO nativo (sem dispositivo virtual) | ✅ Sim | ❌ Dispositivo virtual | ✅ Sim | ❌ Dispositivo virtual | ❌ Dispositivo virtual |
 | Aumento de volume | ✅ até +30 dB | ✅ | ✅ preamp | ✅ | ✅ |
 | Limiter | ✅ sempre ligado | ✅ | ➖ manual | ✅ | ✅ |
-| Equalizador | 🚧 roadmap | ✅ 9 bandas | ✅ avançado / VST | ✅ 31 bandas | ✅ 10 bandas |
-| Presets | 🚧 roadmap | ✅ | ➖ manual | ✅ | ✅ |
+| Equalizador | ✅ 10 bandas | ✅ 9 bandas | ✅ avançado / VST | ✅ 31 bandas | ✅ 10 bandas |
+| Presets | ✅ 6 embutidos | ✅ | ➖ manual | ✅ | ✅ |
+| Graves / Surround / Clareza | ✅ | Só graves / limitado | ⚙️ filtros | ✅ | ✅ |
 | Controle por app | ➖ por dispositivo | ➖ limitado | ⚙️ via config | ✅ | ✅ |
 | Idiomas | ✅ EN / PT / ES | EN | EN | EN (+ varia) | EN |
 | Rede / telemetria | ✅ nenhuma | open-source | open-source | varia | conta / varia |
 | Preço | **Grátis (pessoal)** | Grátis | Grátis | Pago | Grátis (hardware) |
 
-> **Nota honesta:** o SoundBlast é focado em **ganho + limiter**, ainda não em
-> EQ completo. Se você precisa de presets de EQ *hoje*, FxSound ou Equalizer APO
-> são mais completos. A diferença aqui é o **design sem driver virtual** e a
-> simplicidade de um botão.
+> **Nota honesta:** o SoundBlast agora tem **EQ de 10 bandas, presets, Graves,
+> Surround e Clareza**, com headroom automático para não clipar. Não é uma
+> ferramenta de 31 bandas/VST — o foco é a experiência simples e nativa no
+> dispositivo, com limiter de verdade.
 
 ## Funciona com todos os apps
 
@@ -97,8 +101,8 @@ roadmap).
 
 ## Roadmap
 
-- EQ de 10 bandas, bass boost e presets.
-- Presets por dispositivo.
+- Presets por dispositivo e presets personalizados.
+- Importar/exportar perfis de EQ.
 - Assinatura de código.
 - Microsoft Store / winget.
 - Build ARM64.
