@@ -5,7 +5,7 @@
 [English](README.md) · [Português](README.pt-BR.md) · [Español](README.es.md)
 
 ![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-0078D6?style=flat-square)
-![Version](https://img.shields.io/badge/version-1.1.1-2ea44f?style=flat-square)
+![Version](https://img.shields.io/badge/version-1.2.0-2ea44f?style=flat-square)
 ![License](https://img.shields.io/badge/license-Proprietary-red?style=flat-square)
 
 <p align="center">
@@ -35,6 +35,7 @@ the device Windows is already using**.
 - **10-band equalizer** with presets (Flat, Music, Gaming, Bass, Voice, Movie).
 - **Bass, Surround and Clarity** sliders for quick, beginner-friendly tuning.
 - **Automatic headroom** so EQ boosts stay clean instead of clipping.
+- **Import/export EQ profiles** to save and share your settings.
 - **Applies to all active real devices** by default (USB, Bluetooth, HDMI,
   S/PDIF).
 - **Isolate by device** mode with a de-duplicated list (groups Bluetooth
@@ -109,8 +110,7 @@ Technical limits worth knowing:
 3. Open SoundBlast, keep **On**, choose a gain, and (optionally) enable
    *Start with Windows*.
 
-Requirements: Windows 10/11 **x64**. The APO is **unsigned** (code signing is on
-the roadmap).
+Requirements: Windows 10/11 **x64**. The APO is **unsigned**.
 
 ## Security and transparency
 
@@ -121,22 +121,13 @@ the roadmap).
 - The unsigned APO requires `DisableProtectedAudioDG=1`; DRM content may refuse
   audio. Exclusive-mode apps ignore the APO.
 
-## Roadmap
-
-- Per-device presets and custom presets.
-- Import/export of EQ profiles.
-- Code signing (Authenticode / Trusted Signing).
-- Microsoft Store / winget package.
-- ARM64 build.
-
 ## FAQ
 
 **Is it safe?** The code is proprietary, but it is transparent about what it
 changes: see `SECURITY.md`. There is no network or telemetry. Verify the
 installer hash before running.
 
-**Why does SmartScreen warn?** The binary is not code-signed yet. Signing is on
-the roadmap.
+**Why does SmartScreen warn?** The binary is not code-signed yet.
 
 **Does it work with every app?** Shared-mode audio on real devices, yes.
 Exclusive/ASIO apps and apps routed to virtual devices are the exceptions

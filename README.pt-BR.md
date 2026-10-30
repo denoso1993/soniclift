@@ -5,7 +5,7 @@
 [English](README.md) · **Português** · [Español](README.es.md)
 
 ![Plataforma](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-0078D6?style=flat-square)
-![Versão](https://img.shields.io/badge/version-1.1.1-2ea44f?style=flat-square)
+![Versão](https://img.shields.io/badge/version-1.2.0-2ea44f?style=flat-square)
 ![Licença](https://img.shields.io/badge/license-Proprietary-red?style=flat-square)
 
 <p align="center">
@@ -35,6 +35,7 @@ dispositivo que o Windows já está usando**.
 - **Equalizador de 10 bandas** com presets (Flat, Music, Gaming, Bass, Voice, Movie).
 - **Graves, Surround e Clareza** para ajuste rápido e amigável.
 - **Headroom automático** para o EQ não clipar.
+- **Importar/exportar perfis de EQ** para salvar e compartilhar ajustes.
 - Aplica em **todos os dispositivos reais ativos** por padrão (USB, Bluetooth,
   HDMI, S/PDIF).
 - **Isolar por dispositivo** com lista sem duplicados (agrupa perfis do mesmo
@@ -88,8 +89,7 @@ Limites técnicos:
 3. Abra o SoundBlast, deixe **Ligado**, ajuste o ganho e, se quiser, marque
    *Iniciar com o Windows*.
 
-Requisitos: Windows 10/11 **x64**. O APO é **não assinado** (assinatura no
-roadmap).
+Requisitos: Windows 10/11 **x64**. O APO é **não assinado**.
 
 ## Segurança e transparência
 
@@ -98,14 +98,6 @@ roadmap).
 - **Sem rede, sem telemetria, sem coleta de dados.**
 - Hashes: [SHA256SUMS.txt](SHA256SUMS.txt).
 - Conteúdo com DRM pode recusar áudio; apps em modo exclusivo ignoram o APO.
-
-## Roadmap
-
-- Presets por dispositivo e presets personalizados.
-- Importar/exportar perfis de EQ.
-- Assinatura de código.
-- Microsoft Store / winget.
-- Build ARM64.
 
 ## Doação
 
