@@ -1,18 +1,18 @@
-# SoundBlast
+# SonicLift
 
 **Mais volume em qualquer dispositivo — sem driver virtual.**
 
 [English](README.md) · **Português** · [Español](README.es.md)
 
 ![Plataforma](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-0078D6?style=flat-square)
-![Versão](https://img.shields.io/badge/version-1.2.0-2ea44f?style=flat-square)
+![Versão](https://img.shields.io/badge/version-1.3.0-2ea44f?style=flat-square)
 ![Licença](https://img.shields.io/badge/license-Proprietary-red?style=flat-square)
 
 <p align="center">
-  <img src="screenshot.png" width="520" alt="SoundBlast">
+  <img src="screenshot.png" width="520" alt="SonicLift">
 </p>
 
-O SoundBlast é um **APO nativo do Windows** (Audio Processing Object) que aplica
+O SonicLift é um **APO nativo do Windows** (Audio Processing Object) que aplica
 ganho e limiter **dentro** do dispositivo de saída. **Não cria placa de som
 virtual, não adiciona um dispositivo extra para selecionar e não coloca um
 driver no meio.** O Windows continua trocando entre fone, caixa Bluetooth, USB
@@ -26,7 +26,7 @@ e HDMI — e o efeito acompanha o dispositivo.
 - Ferramentas fáceis costumam usar dispositivo virtual, que pode atrapalhar a
   troca de dispositivo que já funciona.
 
-O SoundBlast faz o caminho oposto: **um botão, até +30 dB com limiter, no
+O SonicLift faz o caminho oposto: **um botão, até +30 dB com limiter, no
 dispositivo que o Windows já está usando**.
 
 ## Destaques
@@ -46,9 +46,9 @@ dispositivo que o Windows já está usando**.
 - **Inglês (padrão), português e espanhol**.
 - **Sem rede, sem telemetria, sem coleta de dados.**
 
-## SoundBlast x alternativas
+## SonicLift x alternativas
 
-| | **SoundBlast** | **FxSound** | **Equalizer APO** | **Boom 3D** | **SteelSeries Sonar** |
+| | **SonicLift** | **FxSound** | **Equalizer APO** | **Boom 3D** | **SteelSeries Sonar** |
 |---|---|---|---|---|---|
 | APO nativo (sem dispositivo virtual) | ✅ Sim | ❌ Dispositivo virtual | ✅ Sim | ❌ Dispositivo virtual | ❌ Dispositivo virtual |
 | Aumento de volume | ✅ até +30 dB | ✅ | ✅ preamp | ✅ | ✅ |
@@ -61,14 +61,14 @@ dispositivo que o Windows já está usando**.
 | Rede / telemetria | ✅ nenhuma | open-source | open-source | varia | conta / varia |
 | Preço | **Grátis (pessoal)** | Grátis | Grátis | Pago | Grátis (hardware) |
 
-> **Nota honesta:** o SoundBlast agora tem **EQ de 10 bandas, presets, Graves,
+> **Nota honesta:** o SonicLift agora tem **EQ de 10 bandas, presets, Graves,
 > Surround e Clareza**, com headroom automático para não clipar. Não é uma
 > ferramenta de 31 bandas/VST — o foco é a experiência simples e nativa no
 > dispositivo, com limiter de verdade.
 
 ## Funciona com todos os apps
 
-O SoundBlast processa **áudio em modo compartilhado em dispositivos reais** —
+O SonicLift processa **áudio em modo compartilhado em dispositivos reais** —
 jogos, navegadores, música, sons do sistema, apps de comunicação e vários apps
 ao mesmo tempo.
 
@@ -84,9 +84,9 @@ Limites técnicos:
 
 ## Instalação
 
-1. Baixe o instalador em [Releases](https://github.com/denoso1993/soundblast/releases).
-2. Execute `SoundBlastSetup-*.exe` como **Administrador**.
-3. Abra o SoundBlast, deixe **Ligado**, ajuste o ganho e, se quiser, marque
+1. Baixe o instalador em [Releases](https://github.com/denoso1993/soniclift/releases).
+2. Execute `SonicLiftSetup-*.exe` como **Administrador**.
+3. Abra o SonicLift, deixe **Ligado**, ajuste o ganho e, se quiser, marque
    *Iniciar com o Windows*.
 
 Requisitos: Windows 10/11 **x64**. O APO é **não assinado**.
@@ -115,4 +115,3 @@ Desenvolvido por **Denis de Oliveira Ramos** — https://github.com/denoso1993
 
 Proprietária (All Rights Reserved). Cópia, redistribuição, modificação ou
 engenharia reversa são proibidas sem autorização. Veja [LICENSE](LICENSE).
-“SoundBlast” é nome de projeto; sem afiliação com a Creative Technology.

@@ -1,18 +1,18 @@
-# SoundBlast
+# SonicLift
 
 **More volume on every device — no virtual driver.**
 
 [English](README.md) · [Português](README.pt-BR.md) · [Español](README.es.md)
 
 ![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-0078D6?style=flat-square)
-![Version](https://img.shields.io/badge/version-1.2.0-2ea44f?style=flat-square)
+![Version](https://img.shields.io/badge/version-1.3.0-2ea44f?style=flat-square)
 ![License](https://img.shields.io/badge/license-Proprietary-red?style=flat-square)
 
 <p align="center">
-  <img src="screenshot.png" width="520" alt="SoundBlast">
+  <img src="screenshot.png" width="520" alt="SonicLift">
 </p>
 
-SoundBlast is a **native Windows APO** (Audio Processing Object) that boosts
+SonicLift is a **native Windows APO** (Audio Processing Object) that boosts
 volume, shapes the tone and tames peaks *inside* the output device. There is **no
 virtual sound card, no extra device to select, and no driver layer in the
 middle**. Windows keeps switching between headset, Bluetooth speaker, USB and
@@ -26,7 +26,7 @@ HDMI — and the sound follows the device.
 - Easy tools often use a virtual device, which can get in the way of the device
   switching you already trust.
 
-SoundBlast is the opposite trade-off: **one toggle, +30 dB with a limiter, on
+SonicLift is the opposite trade-off: **one toggle, +30 dB with a limiter, on
 the device Windows is already using**.
 
 ## Highlights
@@ -47,9 +47,9 @@ the device Windows is already using**.
 - **No network access, no telemetry, no data collection.**
 - Ignores virtual devices (e.g. FxSound) on purpose.
 
-## SoundBlast vs. the alternatives
+## SonicLift vs. the alternatives
 
-| | **SoundBlast** | **FxSound** | **Equalizer APO** | **Boom 3D** | **SteelSeries Sonar** |
+| | **SonicLift** | **FxSound** | **Equalizer APO** | **Boom 3D** | **SteelSeries Sonar** |
 |---|---|---|---|---|---|
 | Native APO (no virtual device) | ✅ Yes | ❌ Virtual device | ✅ Yes | ❌ Virtual device | ❌ Virtual device |
 | Volume boost | ✅ up to +30 dB | ✅ | ✅ preamp | ✅ | ✅ |
@@ -62,7 +62,7 @@ the device Windows is already using**.
 | Network / telemetry | ✅ none | open-source | open-source | varies | account / varies |
 | Price | **Free (personal)** | Free | Free | Paid | Free (hardware) |
 
-> **Honest note:** SoundBlast now includes a **10-band EQ, presets, Bass,
+> **Honest note:** SonicLift now includes a **10-band EQ, presets, Bass,
 > Surround and Clarity**, plus automatic headroom to keep boosts clean. It is not
 > a 31-band/VST power tool — the focus is a simple, device-native experience with
 > a real limiter. Feature sets vary by version/platform — check each vendor.
@@ -80,7 +80,7 @@ the device Windows is already using**.
 
 ## How it works
 
-1. `SoundBlastAPO.dll` is registered as an APO and bound to the output endpoint
+1. `SonicLiftAPO.dll` is registered as an APO and bound to the output endpoint
    through `FxProperties`.
 2. `audiodg.exe` loads it inside the device pipeline.
 3. The UI publishes gain/limiter settings through shared memory (and a config
@@ -88,12 +88,12 @@ the device Windows is already using**.
 
 ## Works with all apps
 
-SoundBlast processes **shared-mode audio on real output devices** — games,
+SonicLift processes **shared-mode audio on real output devices** — games,
 browsers, music, system sounds, communication apps, and several apps at once.
 
 Technical limits worth knowing:
 
-- **WASAPI exclusive / ASIO** apps bypass any APO (not only SoundBlast).
+- **WASAPI exclusive / ASIO** apps bypass any APO (not only SonicLift).
 - **DRM / protected audio** may refuse audio because the installer sets
   `DisableProtectedAudioDG=1` (required for an unsigned APO).
 - If an app is **manually routed to a virtual device** (FxSound, Voicemeeter,
@@ -105,9 +105,9 @@ Technical limits worth knowing:
 ## Install
 
 1. Download the latest **installer** from
-   [Releases](https://github.com/denoso1993/soundblast/releases).
-2. Run `SoundBlastSetup-*.exe` as **Administrator**.
-3. Open SoundBlast, keep **On**, choose a gain, and (optionally) enable
+   [Releases](https://github.com/denoso1993/soniclift/releases).
+2. Run `SonicLiftSetup-*.exe` as **Administrator**.
+3. Open SonicLift, keep **On**, choose a gain, and (optionally) enable
    *Start with Windows*.
 
 Requirements: Windows 10/11 **x64**. The APO is **unsigned**.
@@ -137,7 +137,7 @@ explained above.
 Surround and Clarity. Open “Equalizer…” on the main window.
 
 **Can I use it together with FxSound?** Technically yes, but avoid routing apps
-to FxSound's virtual device. Since SoundBlast replaces that role, uninstalling
+to FxSound's virtual device. Since SonicLift replaces that role, uninstalling
 FxSound is recommended.
 
 **Does it survive Windows updates?** Updates/driver installs can reset
@@ -166,5 +166,3 @@ Developed by **Denis de Oliveira Ramos** — https://github.com/denoso1993
 
 Proprietary (All Rights Reserved). Copying, redistribution, modification or
 reverse engineering without permission is prohibited. See [LICENSE](LICENSE).
-“SoundBlast” is a project name; this project is not affiliated with Creative
-Technology.
