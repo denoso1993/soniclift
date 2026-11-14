@@ -14,6 +14,7 @@
   <link rel="alternate" hreflang="x-default" href="https://denoso1993.github.io/soniclift/">
   <link rel="icon" href="../assets/favicon.ico" sizes="any">
   <link rel="stylesheet" href="../assets/style.css">
+  <link rel="preload" as="image" href="../assets/screenshot.png">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="SonicLift">
@@ -121,7 +122,7 @@
 
         <div class="shot">
           <div class="shot-glow" aria-hidden="true"></div>
-          <img src="../assets/screenshot.png" width="516" height="555" alt="Janela principal do SonicLift: ligado, ganho +9,5 dB, APO ativo em 4 de 4 dispositivos" loading="eager">
+          <img src="../assets/screenshot.png" width="516" height="555" alt="Janela principal do SonicLift: ligado, ganho +9,5 dB, APO ativo em 4 de 4 dispositivos" loading="eager" fetchpriority="high">
           <div class="shot-badge"><span class="dot"></span> APO ativo · <span data-version>v1.3.0</span></div>
         </div>
       </div>
@@ -223,7 +224,7 @@
         <div class="steps">
           <article class="step reveal">
             <h3>Instalar</h3>
-            <p>O instalador registra o APO e o vincula ao endpoint de saída via <code>FxProperties</code> do Windows.</p>
+            <p>Na primeira execução, o SonicLift registra o APO e o vincula ao endpoint de saída via <code>FxProperties</code> do Windows.</p>
           </article>
           <article class="step reveal">
             <h3>Ajustar</h3>
@@ -425,7 +426,7 @@
           <div>
             <p class="eyebrow">Download</p>
             <h2>Baixe o SonicLift <span data-version>v1.3.0</span></h2>
-            <p class="lede">Windows 10/11 x64. O instalador registra o APO, cria o atalho do app e mantém suas configurações existentes.</p>
+            <p class="lede">Windows 10/11 x64. O instalador copia o app, cria o atalho e mantém suas configurações. O APO é registrado na primeira execução.</p>
 
             <div class="hash-box">
               <code>1f16c5806a8a5b76ea5c4682d98a33847a3f03c50e92b773b45222ce62a76ea8</code>

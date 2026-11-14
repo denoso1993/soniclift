@@ -14,6 +14,7 @@
   <link rel="alternate" hreflang="x-default" href="https://denoso1993.github.io/soniclift/">
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="preload" as="image" href="assets/screenshot.png">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="SonicLift">
@@ -121,7 +122,7 @@
 
         <div class="shot">
           <div class="shot-glow" aria-hidden="true"></div>
-          <img src="assets/screenshot.png" width="516" height="555" alt="SonicLift main window: on, gain +9.5 dB, APO active on 4 of 4 devices" loading="eager">
+          <img src="assets/screenshot.png" width="516" height="555" alt="SonicLift main window: on, gain +9.5 dB, APO active on 4 of 4 devices" loading="eager" fetchpriority="high">
           <div class="shot-badge"><span class="dot"></span> APO active · <span data-version>v1.3.0</span></div>
         </div>
       </div>
@@ -223,7 +224,7 @@
         <div class="steps">
           <article class="step reveal">
             <h3>Install</h3>
-            <p>The installer registers the APO and binds it to your output endpoint through Windows <code>FxProperties</code>.</p>
+            <p>On first launch, SonicLift registers the APO and binds it to your output endpoint through Windows <code>FxProperties</code>.</p>
           </article>
           <article class="step reveal">
             <h3>Tune</h3>
@@ -425,7 +426,7 @@
           <div>
             <p class="eyebrow">Download</p>
             <h2>Get SonicLift <span data-version>v1.3.0</span></h2>
-            <p class="lede">Windows 10/11 x64. The installer registers the APO, creates the app shortcut and keeps your existing settings.</p>
+            <p class="lede">Windows 10/11 x64. The installer copies the app, creates the shortcut and keeps your existing settings. The APO is registered on first launch.</p>
 
             <div class="hash-box">
               <code>1f16c5806a8a5b76ea5c4682d98a33847a3f03c50e92b773b45222ce62a76ea8</code>
