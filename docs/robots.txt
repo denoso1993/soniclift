@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://denoso1993.github.io/soniclift/sitemap.xml

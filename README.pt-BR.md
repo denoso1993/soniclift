@@ -4,6 +4,7 @@
 
 [English](README.md) · **Português** · [Español](README.es.md)
 
+[![Website](https://img.shields.io/badge/website-soniclift-8b5cf6?style=flat-square)](https://denoso1993.github.io/soniclift/)
 ![Plataforma](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-0078D6?style=flat-square)
 ![Versão](https://img.shields.io/badge/version-1.3.0-2ea44f?style=flat-square)
 ![Licença](https://img.shields.io/badge/license-Proprietary-red?style=flat-square)

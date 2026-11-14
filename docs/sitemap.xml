@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://denoso1993.github.io/soniclift/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denoso1993.github.io/soniclift/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://denoso1993.github.io/soniclift/pt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://denoso1993.github.io/soniclift/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denoso1993.github.io/soniclift/"/>
+  </url>
+  <url>
+    <loc>https://denoso1993.github.io/soniclift/pt/</loc>
+  </url>
+  <url>
+    <loc>https://denoso1993.github.io/soniclift/es/</loc>
+  </url>
+</urlset>

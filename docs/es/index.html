@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.classList.add("js");</script>
+  <title>SonicLift — Más volumen en cualquier dispositivo, sin controlador virtual</title>
+  <meta name="description" content="SonicLift es un APO nativo de Windows que aumenta el volumen hasta +30 dB, con EQ de 10 bandas, graves, surround y claridad. Sin controlador virtual, sin telemetría. Gratis para uso personal.">
+  <meta name="theme-color" content="#080811">
+  <link rel="canonical" href="https://denoso1993.github.io/soniclift/es/">
+  <link rel="alternate" hreflang="en" href="https://denoso1993.github.io/soniclift/">
+  <link rel="alternate" hreflang="pt" href="https://denoso1993.github.io/soniclift/pt/">
+  <link rel="alternate" hreflang="es" href="https://denoso1993.github.io/soniclift/es/">
+  <link rel="alternate" hreflang="x-default" href="https://denoso1993.github.io/soniclift/">
+  <link rel="icon" href="../assets/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="../assets/style.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SonicLift">
+  <meta property="og:title" content="SonicLift — Más volumen en cualquier dispositivo">
+  <meta property="og:description" content="APO nativo de Windows. Hasta +30 dB con limitador, EQ de 10 bandas, graves, surround y claridad. Sin controlador virtual, sin telemetría.">
+  <meta property="og:url" content="https://denoso1993.github.io/soniclift/es/">
+  <meta property="og:image" content="https://denoso1993.github.io/soniclift/assets/og-es.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SonicLift — Más volumen en cualquier dispositivo">
+  <meta name="twitter:description" content="APO nativo de Windows. +30 dB, EQ de 10 bandas, sin controlador virtual, sin telemetría.">
+  <meta name="twitter:image" content="https://denoso1993.github.io/soniclift/assets/og-es.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SonicLift",
+    "operatingSystem": "Windows 10, Windows 11",
+    "applicationCategory": "MultimediaApplication",
+    "softwareVersion": "1.3.0",
+    "downloadUrl": "https://github.com/denoso1993/soniclift/releases/latest",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "author": { "@type": "Person", "name": "Denis de Oliveira Ramos" },
+    "description": "APO nativo de Windows que aumenta el volumen hasta +30 dB con limitador, ecualizador de 10 bandas, graves, surround y claridad. Sin controlador virtual y sin telemetría."
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Ir al contenido</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html" aria-label="SonicLift — inicio">
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <defs>
+            <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#8b5cf6"/>
+              <stop offset="1" stop-color="#2ee6c8"/>
+            </linearGradient>
+          </defs>
+          <rect x="1" y="1" width="38" height="38" rx="11" fill="url(#lg)"/>
+          <g fill="#080811">
+            <rect x="9" y="17" width="3.2" height="6" rx="1.6"/>
+            <rect x="14.4" y="12" width="3.2" height="16" rx="1.6"/>
+            <rect x="19.8" y="8" width="3.2" height="24" rx="1.6"/>
+            <rect x="25.2" y="14" width="3.2" height="12" rx="1.6"/>
+            <rect x="30.6" y="18" width="3.2" height="4" rx="1.6"/>
+          </g>
+        </svg>
+        <span>SonicLift</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="#features">Funciones</a>
+        <a href="#how">Cómo funciona</a>
+        <a href="#compare">Comparar</a>
+        <a href="#faq">Preguntas</a>
+        <a class="nav-cta" href="#download">Descargar</a>
+        <div class="langs" aria-label="Idioma">
+          <a href="../index.html" hreflang="en" lang="en">EN</a>
+          <a href="../pt/index.html" hreflang="pt" lang="pt">PT</a>
+          <a href="index.html" aria-current="page">ES</a>
+        </div>
+      </nav>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">APO nativo de Windows · <span data-version>v1.3.0</span></p>
+          <h1>Más volumen en cualquier dispositivo.<br><span class="grad">Sin controlador virtual.</span></h1>
+          <p class="lede">
+            SonicLift aumenta el volumen hasta <strong>+30 dB</strong> y ajusta el sonido
+            <em>dentro</em> del dispositivo que Windows ya está usando. Sin tarjeta de sonido extra,
+            sin dispositivo virtual que elegir y sin controlador en medio.
+          </p>
+
+          <div class="actions">
+            <a class="btn btn-primary" href="https://github.com/denoso1993/soniclift/releases/download/v1.3.0/SonicLiftSetup-1.3.0.exe">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 21h16"/></svg>
+              Descargar para Windows
+            </a>
+            <a class="btn btn-ghost" href="https://github.com/denoso1993/soniclift">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"/><path d="M10 14 21 3"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>
+              Ver en GitHub
+            </a>
+          </div>
+
+          <ul class="meta">
+            <li><span class="dot"></span> Windows 10/11 x64</li>
+            <li><span class="dot"></span> Gratis para uso personal</li>
+            <li><span class="dot"></span> Sin telemetría</li>
+          </ul>
+
+          <p class="rename">SonicLift es el nuevo nombre de <strong>SoundBlast</strong>. Los ajustes existentes se migran automáticamente. <a href="#faq">Saber más</a></p>
+        </div>
+
+        <div class="shot">
+          <div class="shot-glow" aria-hidden="true"></div>
+          <img src="../assets/screenshot.png" width="516" height="555" alt="Ventana principal de SonicLift: activo, ganancia +9,5 dB, APO activo en 4 de 4 dispositivos" loading="eager">
+          <div class="shot-badge"><span class="dot"></span> APO activo · <span data-version>v1.3.0</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust">
+      <div class="wrap">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v6c0 4.5 3.2 7.5 7.5 9 4.3-1.5 7.5-4.5 7.5-9V6L12 3Z"/><path d="m9 12 2 2 4-4"/></svg>
+          APO nativo, sin dispositivo virtual
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+          +30 dB con limitador siempre activo
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/><path d="m4 4 16 16"/></svg>
+          Sin red, sin telemetría
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c3 3.5 3 14 0 18"/><path d="M12 3c-3 3.5-3 14 0 18"/></svg>
+          Inglés · Portugués · Español
+        </div>
+      </div>
+    </div>
+
+    <section id="features" class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Funciones</p>
+        <h2>Simple por fuera. Serio por dentro.</h2>
+        <p>Un interruptor y un slider para el día a día. Un EQ de 10 bandas completo cuando quieras ir más allá.</p>
+      </div>
+
+      <div class="features">
+        <article class="card reveal">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></span>
+          <h3>Hasta +30 dB, controlado</h3>
+          <p>Lleva más lejos los altavoces flojos de portátil y Bluetooth, con un limitador que controla los picos en vez de recortar.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h2M10 12h10M4 18h10M18 18h2"/><circle cx="16" cy="6" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="18" r="2"/></svg></span>
+          <h3>Ecualizador de 10 bandas</h3>
+          <p>Ajusta de 31 Hz a 16 kHz con seis presets: Flat, Music, Gaming, Bass, Voice y Movie. Guarda y comparte perfiles de EQ.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h2l2-6 3 12 3-9 2 6 2-3h4"/></svg></span>
+          <h3>Graves, Surround y Claridad</h3>
+          <p>Tres sliders amigables para ajuste rápido: peso en graves, anchura estéreo y presencia en medios-altos.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v6c0 4.5 3.2 7.5 7.5 9 4.3-1.5 7.5-4.5 7.5-9V6L12 3Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <h3>Headroom automático</h3>
+          <p>Realza el EQ sin clipping agresivo. SonicLift compensa el preamp a medida que subes las bandas.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="14" height="10" rx="2"/><path d="M6 18h6"/><rect x="17" y="9" width="5" height="11" rx="1.5"/></svg></span>
+          <h3>Nativo en el dispositivo</h3>
+          <p>Windows sigue cambiando entre auriculares, Bluetooth, USB y HDMI. El efecto acompaña al dispositivo real activo.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 14h5l2 3h4l2-3h5"/></svg></span>
+          <h3>Bandeja e inicio automático</h3>
+          <p>Instancia única, inicia con Windows, se minimiza a la bandeja y sigue procesando en segundo plano.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg></span>
+          <h3>Importar y exportar EQ</h3>
+          <p>Guarda tu ajuste en un archivo pequeño, llévalo a otro PC o compártelo con un amigo.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c3 3.5 3 14 0 18"/><path d="M12 3c-3 3.5-3 14 0 18"/></svg></span>
+          <h3>Tres idiomas</h3>
+          <p>Inglés por defecto, con traducciones completas al portugués y al español en la app y el instalador.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></span>
+          <h3>Aislar por dispositivo</h3>
+          <p>Aplica la ganancia solo donde quieras, con una lista sin duplicados que agrupa perfiles Bluetooth del mismo dispositivo.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Cómo funciona</p>
+          <h2>Dentro del dispositivo. No delante de él.</h2>
+          <p>Sin tarjeta de sonido virtual, sin dispositivo extra que elegir y sin capa de controlador en medio.</p>
+        </div>
+
+        <div class="steps">
+          <article class="step reveal">
+            <h3>Instalar</h3>
+            <p>El instalador registra el APO y lo vincula al endpoint de salida mediante <code>FxProperties</code> de Windows.</p>
+          </article>
+          <article class="step reveal">
+            <h3>Ajustar</h3>
+            <p>Define ganancia, EQ, graves, surround y claridad. La interfaz publica los cambios en vivo por memoria compartida.</p>
+          </article>
+          <article class="step reveal">
+            <h3>Seguir escuchando</h3>
+            <p><code>audiodg.exe</code> ejecuta el efecto dentro del pipeline del dispositivo. Cambia de dispositivo y el sonido acompaña.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="compare" class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Comparar</p>
+        <h2>Nativo en el dispositivo, con un limitador real.</h2>
+        <p>Cómo se sitúa SonicLift junto a las herramientas de audio populares para Windows.</p>
+      </div>
+
+      <div class="table-wrap reveal">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" class="own">SonicLift</th>
+              <th scope="col">FxSound</th>
+              <th scope="col">Equalizer APO</th>
+              <th scope="col">Boom 3D</th>
+              <th scope="col">SteelSeries Sonar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">APO nativo (sin dispositivo virtual)</th>
+              <td class="own"><span class="yes">Sí</span></td>
+              <td><span class="no">Dispositivo virtual</span></td>
+              <td><span class="yes">Sí</span></td>
+              <td><span class="no">Dispositivo virtual</span></td>
+              <td><span class="no">Dispositivo virtual</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Aumento de volumen</th>
+              <td class="own">hasta +30 dB</td>
+              <td>Sí</td>
+              <td>preamp</td>
+              <td>Sí</td>
+              <td>Sí</td>
+            </tr>
+            <tr>
+              <th scope="row">Limitador</th>
+              <td class="own">siempre activo</td>
+              <td>Sí</td>
+              <td><span class="partial">manual</span></td>
+              <td>Sí</td>
+              <td>Sí</td>
+            </tr>
+            <tr>
+              <th scope="row">Ecualizador</th>
+              <td class="own">10 bandas</td>
+              <td>9 bandas</td>
+              <td>avanzado / VST</td>
+              <td>31 bandas</td>
+              <td>10 bandas</td>
+            </tr>
+            <tr>
+              <th scope="row">Presets</th>
+              <td class="own">6 incluidos</td>
+              <td>Sí</td>
+              <td><span class="partial">manual</span></td>
+              <td>Sí</td>
+              <td>Sí</td>
+            </tr>
+            <tr>
+              <th scope="row">Graves / Surround / Claridad</th>
+              <td class="own"><span class="yes">Sí</span></td>
+              <td>Solo graves</td>
+              <td>filtros</td>
+              <td>Sí</td>
+              <td>Sí</td>
+            </tr>
+            <tr>
+              <th scope="row">Control por app</th>
+              <td class="own">por dispositivo</td>
+              <td>limitado</td>
+              <td>vía config</td>
+              <td>Sí</td>
+              <td>Sí</td>
+            </tr>
+            <tr>
+              <th scope="row">Idiomas</th>
+              <td class="own">EN / PT / ES</td>
+              <td>EN</td>
+              <td>EN</td>
+              <td>EN (+ varía)</td>
+              <td>EN</td>
+            </tr>
+            <tr>
+              <th scope="row">Red / telemetría</th>
+              <td class="own"><span class="yes">Ninguna</span></td>
+              <td>open-source</td>
+              <td>open-source</td>
+              <td>varía</td>
+              <td>cuenta / varía</td>
+            </tr>
+            <tr>
+              <th scope="row">Precio</th>
+              <td class="own"><strong>Gratis (personal)</strong></td>
+              <td>Gratis</td>
+              <td>Gratis</td>
+              <td>Pago</td>
+              <td>Gratis (hardware)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Comparación basada en las páginas públicas de los productos. Funciones y precios varían según versión, plataforma y plan.</p>
+    </section>
+
+    <section id="compatibility">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Compatibilidad</p>
+          <h2>Funciona con audio en modo compartido en dispositivos reales.</h2>
+          <p>Juegos, navegadores, música, sonidos del sistema, llamadas y varias apps a la vez.</p>
+        </div>
+
+        <div class="split">
+          <ul class="checklist reveal">
+            <li>Se aplica a todos los dispositivos reales activos por defecto: USB, Bluetooth, HDMI y S/PDIF.</li>
+            <li>Sigue el cambio de dispositivo de Windows; sin dispositivo virtual que elegir.</li>
+            <li>Ganancia en vivo: el slider se aplica al instante, sin reiniciar el audio.</li>
+            <li>Ignora dispositivos virtuales como FxSound a propósito.</li>
+            <li>Los ajustes sobreviven al cierre de la interfaz; el APO sigue ejecutándose.</li>
+          </ul>
+
+          <ul class="limits reveal">
+            <li>Las apps en <strong>WASAPI exclusive / ASIO</strong> ignoran cualquier APO, no solo SonicLift.</li>
+            <li>El contenido con <strong>DRM / audio protegido</strong> puede rechazar el audio porque el instalador define <code>DisableProtectedAudioDG=1</code>.</li>
+            <li>Las apps enrutadas manualmente a un <strong>dispositivo virtual</strong> quedan fuera. Mantenlas en Default o en un dispositivo real.</li>
+            <li>El <strong>Mezclador de volumen</strong> de Windows solo lista apps con una sesión de audio activa.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Preguntas</p>
+        <h2>Respuestas directas.</h2>
+      </div>
+
+      <div class="faq">
+        <details class="reveal">
+          <summary>¿Es seguro?</summary>
+          <p>El código es propietario, pero es transparente sobre lo que cambia. Cada clave de registro, archivo y tarea programada está documentada en <a href="https://github.com/denoso1993/soniclift/blob/main/SECURITY.md">SECURITY.md</a>. No hay acceso a la red, telemetría ni recogida de datos. Verifica el hash del instalador antes de ejecutarlo.</p>
+        </details>
+
+        <details class="reveal">
+          <summary>¿Por qué avisa SmartScreen?</summary>
+          <p>Los binarios aún no están firmados, así que Windows muestra el aviso estándar. El instalador se distribuye solo por la release oficial de GitHub, con hash SHA-256 publicado.</p>
+        </details>
+
+        <details class="reveal">
+          <summary>¿Funciona con todas las apps?</summary>
+          <p>Procesa audio en modo compartido en dispositivos reales: juegos, navegadores, música, sonidos del sistema y apps de comunicación. Las apps en WASAPI exclusive o ASIO, y las enrutadas a un dispositivo virtual, son las excepciones.</p>
+        </details>
+
+        <details class="reveal">
+          <summary>¿Tiene ecualizador?</summary>
+          <p>Sí. EQ de 10 bandas de 31 Hz a 16 kHz con seis presets, además de sliders de Graves, Surround y Claridad y headroom automático. También puedes importar y exportar perfiles de EQ.</p>
+        </details>
+
+        <details class="reveal">
+          <summary>¿Puedo usarlo con FxSound?</summary>
+          <p>Técnicamente sí, pero evita enrutar apps al dispositivo virtual de FxSound. Como SonicLift ocupa ese papel, se recomienda desinstalar FxSound.</p>
+        </details>
+
+        <details class="reveal">
+          <summary>¿Sobrevive a las actualizaciones de Windows?</summary>
+          <p>Las actualizaciones de Windows y las instalaciones de controladores pueden restablecer <code>FxProperties</code>. Si el audio deja de procesarse, abre SonicLift y vuelve a aplicar el APO.</p>
+        </details>
+
+        <details class="reveal">
+          <summary>¿Es gratis?</summary>
+          <p>Gratis para uso personal, con donación opcional. El uso comercial requiere una licencia aparte.</p>
+        </details>
+
+        <details class="reveal">
+          <summary>¿Por qué el nombre nuevo?</summary>
+          <p>SonicLift es el nuevo nombre de SoundBlast. Es la misma app con una identidad más clara. En el primer inicio, los ajustes, perfiles de EQ y vínculos de dispositivo se migran automáticamente.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="download" class="wrap">
+      <div class="download reveal">
+        <div class="download-grid">
+          <div>
+            <p class="eyebrow">Descarga</p>
+            <h2>Descarga SonicLift <span data-version>v1.3.0</span></h2>
+            <p class="lede">Windows 10/11 x64. El instalador registra el APO, crea el acceso directo y conserva tus ajustes existentes.</p>
+
+            <div class="hash-box">
+              <code>1f16c5806a8a5b76ea5c4682d98a33847a3f03c50e92b773b45222ce62a76ea8</code>
+              <button class="copy-btn" type="button" data-copy="1f16c5806a8a5b76ea5c4682d98a33847a3f03c50e92b773b45222ce62a76ea8" data-copied="Copiado">Copiar SHA-256</button>
+            </div>
+            <p class="note">SHA-256 de <code>SonicLiftSetup-1.3.0.exe</code>. El APO no está firmado; el contenido con DRM puede rechazar el audio.</p>
+          </div>
+
+          <div class="download-card">
+            <h3>Instalador de SonicLift</h3>
+            <p class="sub"><span data-version>v1.3.0</span> · 61 MB · Windows x64</p>
+            <a class="btn btn-primary" href="https://github.com/denoso1993/soniclift/releases/download/v1.3.0/SonicLiftSetup-1.3.0.exe">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 21h16"/></svg>
+              Descargar instalador
+            </a>
+            <p class="fine">Requiere Windows 10 u 11 (x64). Gratis para uso personal. <a href="https://github.com/denoso1993/soniclift/releases">Notas de la versión y hashes</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="security" class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Seguridad y transparencia</p>
+        <h2>Nada oculto en segundo plano.</h2>
+        <p>Cambios documentados, hashes publicados y cero actividad de red.</p>
+      </div>
+
+      <div class="cards-4">
+        <div class="mini reveal"><strong>Sin red</strong><span>La app y el APO no hacen peticiones de red.</span></div>
+        <div class="mini reveal"><strong>Sin telemetría</strong><span>Sin analytics, sin cuentas, sin recogida de datos personales.</span></div>
+        <div class="mini reveal"><strong>Documentado</strong><span>Cada clave de registro, archivo y tarea está en SECURITY.md.</span></div>
+        <div class="mini reveal"><strong>Verificable</strong><span>Instalador y binarios se publican con hashes SHA-256.</span></div>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <div class="donate reveal">
+        <div>
+          <h2>Apoya el proyecto</h2>
+          <p>Gratis para uso personal. Si SonicLift hizo que tus altavoces volvieran a ser útiles, una donación opcional en crypto ayuda.</p>
+        </div>
+        <div class="wallet">
+          <code>0xcBf21D49f65ca55228310344bE91F607d8d09309</code>
+          <button class="copy-btn" type="button" data-copy="0xcBf21D49f65ca55228310344bE91F607d8d09309" data-copied="Copiado">Copiar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="../index.html">
+            <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+              <defs>
+                <linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#8b5cf6"/>
+                  <stop offset="1" stop-color="#2ee6c8"/>
+                </linearGradient>
+              </defs>
+              <rect x="1" y="1" width="38" height="38" rx="11" fill="url(#lg2)"/>
+              <g fill="#080811">
+                <rect x="9" y="17" width="3.2" height="6" rx="1.6"/>
+                <rect x="14.4" y="12" width="3.2" height="16" rx="1.6"/>
+                <rect x="19.8" y="8" width="3.2" height="24" rx="1.6"/>
+                <rect x="25.2" y="14" width="3.2" height="12" rx="1.6"/>
+                <rect x="30.6" y="18" width="3.2" height="4" rx="1.6"/>
+              </g>
+            </svg>
+            <span>SonicLift</span>
+          </a>
+          <p>Aumento de audio por dispositivo para Windows, hecho como APO nativo. Por Denis de Oliveira Ramos.</p>
+        </div>
+
+        <div>
+          <h4>Producto</h4>
+          <ul>
+            <li><a href="#features">Funciones</a></li>
+            <li><a href="#compare">Comparar</a></li>
+            <li><a href="#faq">Preguntas</a></li>
+            <li><a href="#download">Descargar</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Proyecto</h4>
+          <ul>
+            <li><a href="https://github.com/denoso1993/soniclift">GitHub</a></li>
+            <li><a href="https://github.com/denoso1993/soniclift/releases">Releases</a></li>
+            <li><a href="https://github.com/denoso1993/soniclift/blob/main/SECURITY.md">Seguridad</a></li>
+            <li><a href="https://github.com/denoso1993/soniclift/blob/main/LICENSE">Licencia</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Idiomas</h4>
+          <ul>
+            <li><a href="../index.html" hreflang="en" lang="en">English</a></li>
+            <li><a href="../pt/index.html" hreflang="pt" lang="pt">Português</a></li>
+            <li><a href="index.html" aria-current="page">Español</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Denis de Oliveira Ramos. Todos los derechos reservados.</span>
+        <span>Los nombres de productos son marcas de sus respectivos propietarios.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/app.js" defer></script>
+</body>
+</html>
